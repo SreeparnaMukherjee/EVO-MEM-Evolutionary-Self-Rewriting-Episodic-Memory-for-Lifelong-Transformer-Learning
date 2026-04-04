@@ -13,7 +13,7 @@ Component Breakdown:
 
 Vision Transformer Encoder (ViT)
 Splits each satellite image into 16×16 patches and encodes them into dense feature embeddings using a pretrained ViT-Base/16 backbone. The last two transformer blocks are fine-tuned while the rest of the backbone is frozen to preserve pretrained spatial representations.
-Episodic Memory Bank (EMB)
+Episodic Memory Bank (EMB).
 A learnable key-value memory store with three distinct operations:
 
 Memory Write — absorbs new visual features into memory slots via attention-gated writes, controlling how much new information each slot should store
