@@ -1,12 +1,34 @@
 # Evolutionary Memory Model for Satellite Image Captioning
 Overview:
 
-This project implements a novel deep learning architecture for automatic satellite image captioning that combines episodic memory with evolutionary computation. The model ingests time-based streams of remote sensing imagery and generates natural language descriptions by learning what to remember, what to forget, and how to evolve its memory population over time.
+EVO_MEM_VL (Evolution Memory Vision Learning) is a deep learning project that integrates Vision Transformers (ViT) with a novel evolutionary episodic memory mechanism to improve classification of temporal satellite imagery.
 
+The model simulates real-world remote sensing datasets and introduces a memory-augmented learning paradigm, where past learned representations evolve and influence future predictions.
 Architecture:
 
 <img width="273" height="256" alt="image" src="https://github.com/user-attachments/assets/29d81eb5-eeb4-4863-9735-079c8f8b47bf" />
 
+
+
+Key Features:
+
+-Episodic Memory Bank (EMB)
+Stores learned feature embeddings dynamically during training.
+
+-Evolutionary Memory Selection
+Uses similarity-based retrieval + mutation to evolve useful past knowledge.
+
+-Vision Transformer Encoder (ViT)
+Extracts high-level image representations using pretrained transformer architecture.
+
+-Temporal Satellite Data Simulation
+Mimics real-world datasets like:
+NWPU (categorical classification)
+RSICD (caption-based understanding)
+Sentinel-2 (temporal evolution)
+
+-Memory-Augmented Classification
+Combines current features with retrieved memory embeddings for better predictions.
 
 
 Component Breakdown:
@@ -42,14 +64,7 @@ Length penalty to prevent short degenerate outputs
 Diversity penalty that discourages beams from repeating high-frequency tokens, producing more varied and semantically rich captions
 
 
-Datasets
-
-<img width="547" height="163" alt="image" src="https://github.com/user-attachments/assets/274dfdfc-5db8-411c-bf95-04d53fcc0363" />
-
-
-Results
-
-The model is evaluated using standard image captioning metrics:
-
-<img width="469" height="126" alt="image" src="https://github.com/user-attachments/assets/37652213-7e13-4365-8e2f-e526228f7a73" />
-
+ Output
+Training vs Validation Loss Graph
+Final prediction visualization of temporal image stream
+Caption-style prediction for detected theme
